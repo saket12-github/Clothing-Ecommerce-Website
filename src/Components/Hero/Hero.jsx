@@ -1,28 +1,26 @@
-import React from 'react'
-import './Hero.css'
-import hand_icon from '../Assets/hand_icon.png'
-import arrow_icon from '../Assets/arrow.png'
-import hero_image from '../Assets/hero_image.png'
+import React from 'react';
+import './Hero.css';
+import arrow_icon from '../Assets/arrow.png';
+import hero_image from '../Assets/hero_image.png';
+import { Link } from 'react-router-dom';
 
 export const Hero = () => {
   return (
     <div className='hero'>
-        <div className="hero-left">
-            <h2>New Arrivals Only</h2>
-            <div>
-                <div className="hero-hand-icon">
-                    <p>New Deals</p>
-                </div>
-                <p>Featured Brands</p>
-            </div>
-            <div className="hero-latest-btn">
-                <div>Latest Collection</div>
-                <img src={arrow_icon} alt="" />
-            </div>
+      <div className="hero-left">
+        <h2>New Arrivals Only</h2>
+        <div className="hero-hand-icon">
+          <p>New</p>
         </div>
-        <div className="hero-right">
-            <img src={hero_image}  alt="" />
-        </div>
+        <p>Collections<br />For Everyone</p>
+        <Link to='/womens' className="hero-latest-btn">
+          Latest Collection
+          <img src={arrow_icon} alt="" />
+        </Link>
+      </div>
+      <div className="hero-right">
+        <img src={hero_image} alt="Hero" />
+      </div>
     </div>
-  )
-}
+  );
+};

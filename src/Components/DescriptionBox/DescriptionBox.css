@@ -1,5 +1,11 @@
-.descriptionBox{
-    margin: 120px 170px;
+.descriptionBox {
+    margin: 60px 80px;
+}
+
+@media (max-width: 768px) {
+    .descriptionBox {
+        margin: 40px 20px;
+    }
 }
 
 .descriptionBox-navigator{
